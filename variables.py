@@ -14,7 +14,7 @@ is_true = True
 is_light_on = False
 
 #Points 13 - Declare multiple variable on one line
-first_name1, last_name1, never_gonna_give_u_up, never_gonna_let_u_down, never_gonna_run_around, never_gonna_desert_u = "Rick", "Astley", True, True, True, True
+first_name1, last_name1, never_gonna_give_u_up, never_gonna_let_u_down, never_gonna_run_around, desert_u = "Rick", "Astley", True, True, True, False
 
 #Exercises: Level 2
 #Points 1-3
