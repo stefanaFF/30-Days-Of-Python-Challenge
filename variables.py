@@ -57,4 +57,4 @@ last_name = input("Last name: ")
 full_name = first_name + " " + last_name
 country = input("Country: ")
 city = input("City: ")
-age = input("What's my agae again? ")
+age = input("What's my age again? ")
