@@ -106,3 +106,34 @@ len_word1=len(word1)
 float_word1 = float(len_word1)
 str_word1 = str(float_word1)
 print("The converted converted lenght of the word \"%s\" is:" % word1, str_word1)
+
+#Point 17
+number_check = int(input("Enter number to check: "))
+if number_check % 2 == 0:
+    print("Number is even.")
+else:
+    print("Number is odd.")
+
+#Point 18
+print(7//3 == int(2.7))
+
+#Point 19
+print(type('10')==type(10))
+
+#Point 20
+print(int(float('9.8'))==10)
+
+#Point 21
+hours = float(input("Enter number of worked hours: "))
+rate = float(input("Enter rate per hour in \N{euro sign}: "))
+payment = round(hours*rate,3)
+print("Payment is %s \N{euro sign}." % payment)
+
+#Point 22
+years_on_earth = int(input("Years you have lived: "))
+second_on_earth = years_on_earth*365*24*3600
+print("You have lived for roughly %s seconds." % second_on_earth)
+
+#Point 23 - the internet has the answers
+for i in range(1, 6):
+    print(i, 1, i, i**2, i**3)
