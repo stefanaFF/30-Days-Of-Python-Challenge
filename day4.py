@@ -89,3 +89,61 @@ print(cfa.index("F"))
 
 #Point 22
 print(cfa.rindex("l"))
+
+#Point 23 - 27
+sentence_string = "You cannot end a sentence with because because because is a conjunction"
+sentence_sub_string = "because"
+point23 = sentence_string.index(sentence_sub_string)
+print(point23)
+point24 = sentence_string.rindex(sentence_sub_string)
+print(point24)
+print(sentence_string[point23:point24+len(sentence_sub_string)])
+#or
+sentence_sub_string2 = "because because because"
+start_point25 = sentence_string.index(sentence_sub_string2)
+end_point25 = start_point25 + len(sentence_sub_string2)
+print(sentence_string[start_point25:end_point25])
+
+#Point 28
+print(cfa.startswith("Coding"))
+
+#Point 29
+print(cfa.endswith("coding"))
+
+#Point 30
+cfa_space = '   Coding For All      '
+print(cfa_space.strip(" "))
+
+#Point 31
+strg1 = "30DaysOfPython"
+strg2 = "thirty_days_of_python"
+print(strg1.isidentifier())
+print(strg2.isidentifier())
+
+#Point 32
+library_list = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print(" - ".join(library_list))
+
+#Point 33
+print("I am enjoying this challenge.\nI just wonder what is next.")
+
+#Point 34
+print("Name\t\tAge\t\tCountry\t\tCity\nAsabeneh\t250\t\tFinland\t\tHelsinki")
+
+#Point 35
+radius = 10
+area = 3.14*radius**2
+print("radius = %s" % radius)
+print("area = 3.14 * radius ** 2")
+print("The area of a circle with radius {} is {:.2f} meters square.".format(radius,area))
+
+#Point 34
+a = 8
+b = 6
+print('{} + {} = {}'.format(a,b,a+b))
+print('{} - {} = {}'.format(a,b,a-b))
+print('{} * {} = {}'.format(a,b,a*b))
+print('{} / {} = {:.2f}'.format(a,b,a/b))
+print('{} % {} = {}'.format(a,b,a%b))
+print('{} // {} = {}'.format(a,b,a//b))
+print('{} ** {} = {}'.format(a,b,a**b))
