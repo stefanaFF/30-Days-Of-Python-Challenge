@@ -1,7 +1,7 @@
 #Exercises: Level 1
 #Point 1 - 4
 empty_list = []
-lst = ["never","goona","give","you", "up"]
+lst = ["never","gonna","give","you", "up"]
 print(len(lst))
 first_item = lst[0]
 last_item = lst[-1]
