@@ -8,7 +8,7 @@ dog ['legs'] = True
 dog ['age'] = 42
 print(dog)
 
-#Point 3
+#Point 3-11
 student_dog = {'first_name':'Ollie',
            'last_name':'NibNib',
            'gender':'Boy Dog',
