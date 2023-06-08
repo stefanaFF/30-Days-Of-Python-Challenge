@@ -179,3 +179,60 @@ def is_empty(param):
         print("Not empty.")
         return False
 is_empty([])
+
+#Point 4 - Write different functions which take lists. 
+# They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+def calculate_mean(lst):
+    print("The mean of {} is {}.".format(lst,sum(lst) / len(lst)))
+    return sum(lst) / len(lst)
+calculate_mean([1, 2, 3, 4, 5, 5, 1])
+
+def calculate_median(lst):
+    sorted_lst = sorted(lst)
+    if len(sorted_lst)%2 != 0:
+        mid = sorted_lst[len(sorted_lst)//2]
+    else:
+        mid = sorted_lst[len(sorted_lst)//2-1:len(sorted_lst)//2+1]
+    print("The median of {} is {}.".format(lst,mid))
+    return mid
+calculate_median([1, 2, 3, 4, 5, 6])
+
+def calculate_mode(lst):
+    mode_count = {}
+    max_count = 0
+    modes = []
+    for nr in lst:
+        if nr in mode_count:
+            mode_count[nr] += 1
+        else:
+            mode_count[nr] = 1
+        if mode_count[nr] > max_count:
+            max_count = mode_count[nr]
+    for nr, count in mode_count.items():
+        if count == max_count:
+            modes.append(nr)
+    if len(modes) == len(lst):
+        print("In the list {} there are no modes.".format(lst))
+        return []
+    print("The modes for {} are {}.".format(lst, modes))
+    return modes
+calculate_mode([1,1,2,2,3])
+
+def calculate_range(lst):
+    print("The range of {} is {}.".format(lst,max(lst) - min(lst)))
+    return max(lst)-min(lst)
+calculate_range([1, 2, 3, 4, 5, 6])
+
+def calculate_variance(lst):
+    mean = calculate_mean(lst)
+    squared_diff = [(nr - mean) ** 2 for nr in lst]
+    print("The variante of {} is {}.".format(lst,round(sum(squared_diff)/len(lst),3)))
+    return sum(squared_diff)/len(lst)
+calculate_variance([1, 2, 3, 4, 5, 6])
+
+def calculate_std(lst):
+    variance = calculate_variance(lst)
+    std = math.sqrt(variance)
+    print("The standard deviation of {} is {}.".format(lst,round(std,3)))
+    return std
+calculate_std([1, 2, 3, 4, 5, 6])
